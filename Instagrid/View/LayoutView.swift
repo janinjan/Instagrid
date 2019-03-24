@@ -10,16 +10,20 @@ import UIKit
 
 class LayoutView: UIView {
     
+    // MARK: - Outlets
     @IBOutlet private var topStackView: UIStackView!
     @IBOutlet private var bottomStackView: UIStackView!
+    @IBOutlet var picturesButton: [UIButton]!
+    @IBOutlet var picturesCollectionImageView: [UIImageView]!
     
-    
+    // MARK: - Properties
     var layoutStyle: LayoutStyle = .layout3 {
         didSet {
             setLayoutStyle(layoutStyle)
         }
     }
     
+    // MARK: - Methods
     private func setLayoutStyle(_ layoutStyle: LayoutStyle) {
         switch layoutStyle {
         case .layout1:
