@@ -41,6 +41,9 @@
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6mg-OB-6h9">
                                                                 <rect key="frame" x="0.0" y="0.0" width="146.66666666666666" height="146.66666666666666"/>
                                                                 <state key="normal" image="BluePlusSign"/>
+                                                                <connections>
+                                                                    <action selector="picturesButtonsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Aq4-8P-eJP"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -63,9 +66,12 @@
                                                             <imageView opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ppE-mf-bXZ" userLabel="Image2">
                                                                 <rect key="frame" x="0.0" y="0.0" width="146.33333333333334" height="146.66666666666666"/>
                                                             </imageView>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xPK-m3-hNh">
+                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xPK-m3-hNh">
                                                                 <rect key="frame" x="0.0" y="0.0" width="146.33333333333334" height="146.66666666666666"/>
                                                                 <state key="normal" image="BluePlusSign"/>
+                                                                <connections>
+                                                                    <action selector="picturesButtonsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="acN-4A-Die"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -93,9 +99,12 @@
                                                             <imageView opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pv3-CW-mMH" userLabel="Image3">
                                                                 <rect key="frame" x="0.0" y="0.0" width="146.66666666666666" height="146.33333333333334"/>
                                                             </imageView>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rkm-Zn-6eh">
+                                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rkm-Zn-6eh">
                                                                 <rect key="frame" x="0.0" y="0.0" width="146.66666666666666" height="146.33333333333334"/>
                                                                 <state key="normal" image="BluePlusSign"/>
+                                                                <connections>
+                                                                    <action selector="picturesButtonsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JpX-Zv-qdW"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -118,9 +127,12 @@
                                                             <imageView opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m2a-bm-Iol" userLabel="Image4">
                                                                 <rect key="frame" x="0.0" y="0.0" width="146.33333333333334" height="146.33333333333334"/>
                                                             </imageView>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CHK-lT-yCQ">
+                                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CHK-lT-yCQ">
                                                                 <rect key="frame" x="0.0" y="0.0" width="146.33333333333334" height="146.33333333333334"/>
                                                                 <state key="normal" image="BluePlusSign"/>
+                                                                <connections>
+                                                                    <action selector="picturesButtonsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SO7-rn-Dt4"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -153,6 +165,14 @@
                                 <connections>
                                     <outlet property="bottomStackView" destination="uSv-KJ-jsY" id="0VT-Vl-m0H"/>
                                     <outlet property="topStackView" destination="TEe-tE-4me" id="1DS-nn-NgI"/>
+                                    <outletCollection property="picturesButton" destination="6mg-OB-6h9" collectionClass="NSMutableArray" id="aZL-xM-UJs"/>
+                                    <outletCollection property="picturesButton" destination="xPK-m3-hNh" collectionClass="NSMutableArray" id="EQw-XL-h99"/>
+                                    <outletCollection property="picturesButton" destination="rkm-Zn-6eh" collectionClass="NSMutableArray" id="MBw-qU-gpr"/>
+                                    <outletCollection property="picturesButton" destination="CHK-lT-yCQ" collectionClass="NSMutableArray" id="m1j-CS-txu"/>
+                                    <outletCollection property="picturesCollectionImageView" destination="7C2-c3-Qxy" collectionClass="NSMutableArray" id="w7M-WD-Wb0"/>
+                                    <outletCollection property="picturesCollectionImageView" destination="ppE-mf-bXZ" collectionClass="NSMutableArray" id="3s1-I2-HP6"/>
+                                    <outletCollection property="picturesCollectionImageView" destination="Pv3-CW-mMH" collectionClass="NSMutableArray" id="Hcs-n6-x8r"/>
+                                    <outletCollection property="picturesCollectionImageView" destination="m2a-bm-Iol" collectionClass="NSMutableArray" id="tJa-rS-Dea"/>
                                 </connections>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Tj3-SJ-OUb" userLabel="Swipe up">
@@ -370,6 +390,7 @@
                     </view>
                     <connections>
                         <outlet property="mainView" destination="b7v-N2-Rrh" id="bqJ-ws-YTs"/>
+                        <outlet property="swipeLayout" destination="Tj3-SJ-OUb" id="eJX-m2-gS9"/>
                         <outletCollection property="layoutsButton" destination="Mgb-eH-eOA" collectionClass="NSMutableArray" id="qbA-lv-wtq"/>
                         <outletCollection property="layoutsButton" destination="bkw-HV-O8m" collectionClass="NSMutableArray" id="Ghy-gP-IdS"/>
                         <outletCollection property="layoutsButton" destination="hAg-QM-gzq" collectionClass="NSMutableArray" id="o48-S8-3ih"/>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D572C5822439363004F4B9A /* UIImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D572C5722439363004F4B9A /* UIImagePickerController.swift */; };
 		3D58C231223A59EF00DDA845 /* LayoutStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D58C230223A59EF00DDA845 /* LayoutStyle.swift */; };
 		3DA97AB8223080370025D4E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA97AB7223080370025D4E7 /* AppDelegate.swift */; };
 		3DA97ABA223080370025D4E7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA97AB9223080370025D4E7 /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D572C5722439363004F4B9A /* UIImagePickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImagePickerController.swift; sourceTree = "<group>"; };
 		3D58C230223A59EF00DDA845 /* LayoutStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutStyle.swift; sourceTree = "<group>"; };
 		3DA97AB4223080370025D4E7 /* Instagrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DA97AB7223080370025D4E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D572C5622439342004F4B9A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3D572C5722439363004F4B9A /* UIImagePickerController.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		3D58C232223D0A5600DDA845 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +81,7 @@
 		3DA97AB6223080370025D4E7 /* Instagrid */ = {
 			isa = PBXGroup;
 			children = (
+				3D572C5622439342004F4B9A /* Extensions */,
 				3DA97AD0223081470025D4E7 /* Supporting Files */,
 				3DA97ACD223081230025D4E7 /* Model */,
 				3DA97ACE2230812A0025D4E7 /* View */,
@@ -193,6 +204,7 @@
 				3DA97AB8223080370025D4E7 /* AppDelegate.swift in Sources */,
 				3DC37C4F2239ACB300426AC4 /* LayoutView.swift in Sources */,
 				3D58C231223A59EF00DDA845 /* LayoutStyle.swift in Sources */,
+				3D572C5822439363004F4B9A /* UIImagePickerController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
