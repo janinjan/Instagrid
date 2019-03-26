@@ -79,6 +79,14 @@ class ViewController: UIViewController {
         }
     }
     
+    func alertGridIsIncomplete() {
+        let alert = UIAlertController(title: "Missing picture(s)", message: "You may add picture(s) in the grid before sharing.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+            NSLog("The \"OK\" alert occured.")
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     // MARK: - Gestures
     func tapGesturesRecognizer() {
         mainView.picturesCollectionImageView.forEach( { $0.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(picturesCollectionImageViewTapped(gesture:)))) })
@@ -104,11 +112,21 @@ class ViewController: UIViewController {
             if gesture.direction == .up && UIDevice.current.orientation.isPortrait {
                 self.mainView.transform = CGAffineTransform(translationX: 0, y: -self.view.frame.height)
                 print("swipe up")
-                self.handleShare()
-            } else if gesture.direction == .left && UIDevice.current.orientation.isLandscape {
+                if self.mainView.missingPictureInGrid() {
+                    self.alertGridIsIncomplete()
+                    self.swipeLayoutSetToIdentity()
+                } else {
+                    self.handleShare()
+                }
+            } else if gesture.direction == .left  && UIDevice.current.orientation.isLandscape {
                 self.mainView.transform = CGAffineTransform(translationX: -self.view.frame.width, y: 0)
                 print("swipe left")
-                self.handleShare()
+                if self.mainView.missingPictureInGrid() {
+                    self.alertGridIsIncomplete()
+                    self.swipeLayoutSetToIdentity()
+                } else {
+                    self.handleShare()
+                }
             }
         }
     }
