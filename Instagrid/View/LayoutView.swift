@@ -37,4 +37,15 @@ class LayoutView: UIView {
             bottomStackView.viewWithTag(3)?.isHidden = false
         }
     }
+    
+    func missingPictureInGrid() -> Bool {
+        for picture in picturesCollectionImageView {
+            if let parentView = picture.superview {
+                if parentView.isHidden == false &&  picture.image == nil {
+                    return true
+                }
+            }
+        }
+        return false
+    }
 }
