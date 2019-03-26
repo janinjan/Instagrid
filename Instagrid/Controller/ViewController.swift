@@ -63,10 +63,12 @@ class ViewController: UIViewController {
     }
     
     func handleShare() {
-        UIGraphicsBeginImageContext(mainView.frame.size)
+        UIGraphicsBeginImageContextWithOptions(mainView.frame.size, mainView.isOpaque, 0.0)
+        mainView.drawHierarchy(in: mainView.bounds, afterScreenUpdates: true)
         guard let context = UIGraphicsGetCurrentContext() else { return }
-            mainView.layer.render(in: context)
+        mainView.layer.render(in: context)
         guard let imageToShare = UIGraphicsGetImageFromCurrentImageContext() else { return }
+        UIGraphicsEndImageContext()
         
         let activityVC = UIActivityViewController(activityItems: [imageToShare], applicationActivities: nil)
         present(activityVC, animated: true, completion: nil)
