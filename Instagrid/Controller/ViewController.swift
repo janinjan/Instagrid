@@ -49,6 +49,7 @@ class ViewController: UIViewController {
         mainView.layoutStyle = .layout2 // start with layout 2 selected
         tapGesturesRecognizer()
         swipeGestureDirectionRecognizer()
+        longPressGestureRecognizer()
     }
     
     /**
@@ -122,6 +123,9 @@ class ViewController: UIViewController {
         }
     }
     
+    /**
+     * Swipe up or left according to device orientation to share image if grid is complete
+     */
     @objc private func mainViewSwiped(gesture: UISwipeGestureRecognizer) {
         UIView.animate(withDuration: 0.3) {
             if gesture.direction == .up && UIDevice.current.orientation.isPortrait {
@@ -144,6 +148,30 @@ class ViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    private func longPressGestureRecognizer() {
+        mainView.picturesCollectionImageView.forEach( { $0.addGestureRecognizer(UILongPressGestureRecognizer(target: self, action: #selector(longPressed(gesture:)))) })
+    }
+    
+    /**
+     * Allow to delete picture by long press gesture on it
+     */
+    @objc private func longPressed(gesture: UILongPressGestureRecognizer) {
+        tag = gesture.view?.tag
+        guard let tag = tag else { return }
+        if gesture.state == .ended { return }
+        let title = "Delete Image?"
+        let message = "Are you sure you want to delete this image?"
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alert.addAction(cancelAction)
+        let deleteAction = UIAlertAction(title: "Delete", style: .destructive, handler: { (action) -> Void in
+            self.mainView.picturesCollectionImageView[tag].image = nil // delete image
+            self.mainView.picturesButton[tag].isHidden = false // show picture selection button
+        })
+        alert.addAction(deleteAction)
+        present(alert, animated: true, completion: nil)
     }
 }
 
