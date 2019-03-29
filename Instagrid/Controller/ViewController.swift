@@ -17,9 +17,12 @@ class ViewController: UIViewController {
     
     // MARK: - Properties
     private var swipeGesture = UISwipeGestureRecognizer()
-    var tag: Int?
+    private var tag: Int?
     
     // MARK: - Actions
+    /**
+     * Changing layout style at layout buttons selection
+     */
     @IBAction func layoutButtonsTapped(_ sender: UIButton) {
         layoutsButton.forEach({ $0.isSelected = false })
         sender.isSelected = true
@@ -43,11 +46,14 @@ class ViewController: UIViewController {
     // MARK: - Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        mainView.layoutStyle = .layout2
+        mainView.layoutStyle = .layout2 // start with layout 2 selected
         tapGesturesRecognizer()
         swipeGestureDirectionRecognizer()
     }
     
+    /**
+     * Get image from Photo Library
+     */
     private func pickAnImage() {
         let imagePickerController = UIImagePickerController()
         imagePickerController.delegate = self
@@ -56,13 +62,19 @@ class ViewController: UIViewController {
         present(imagePickerController, animated: true, completion: nil)
     }
     
+    /**
+     * Grid returns to his initial position
+     */
     private func swipeLayoutSetToIdentity() {
         UIView.animate(withDuration: 0.3, animations: {
             self.mainView.transform = .identity
         })
     }
     
-    func handleShare() {
+    /**
+     * Share created grid
+     */
+    private func handleShare() {
         UIGraphicsBeginImageContextWithOptions(mainView.frame.size, mainView.isOpaque, 0.0)
         mainView.drawHierarchy(in: mainView.bounds, afterScreenUpdates: true)
         guard let context = UIGraphicsGetCurrentContext() else { return }
@@ -79,25 +91,28 @@ class ViewController: UIViewController {
         }
     }
     
-    func alertGridIsIncomplete() {
+    /**
+     * Displays an alert message if grid is incomplete before sharing
+     */
+    private func alertGridIsIncomplete() {
         let alert = UIAlertController(title: "Missing picture(s)", message: "You may add picture(s) in the grid before sharing.", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
             NSLog("The \"OK\" alert occured.")
         }))
-        self.present(alert, animated: true, completion: nil)
+        present(alert, animated: true, completion: nil)
     }
     
     // MARK: - Gestures
-    func tapGesturesRecognizer() {
+    private func tapGesturesRecognizer() {
         mainView.picturesCollectionImageView.forEach( { $0.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(picturesCollectionImageViewTapped(gesture:)))) })
     }
     
-    @objc func picturesCollectionImageViewTapped(gesture: UIGestureRecognizer) {
+    @objc private func picturesCollectionImageViewTapped(gesture: UIGestureRecognizer) {
         tag = gesture.view?.tag
         pickAnImage()
     }
     
-    func swipeGestureDirectionRecognizer() {
+    private func swipeGestureDirectionRecognizer() {
         let directions: [UISwipeGestureRecognizer.Direction] = [.up, .left]
         for direction in directions {
             swipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(mainViewSwiped(gesture:)))
@@ -107,7 +122,7 @@ class ViewController: UIViewController {
         }
     }
     
-    @objc func mainViewSwiped(gesture: UISwipeGestureRecognizer) {
+    @objc private func mainViewSwiped(gesture: UISwipeGestureRecognizer) {
         UIView.animate(withDuration: 0.3) {
             if gesture.direction == .up && UIDevice.current.orientation.isPortrait {
                 self.mainView.transform = CGAffineTransform(translationX: 0, y: -self.view.frame.height)
@@ -138,7 +153,7 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             guard let tag = tag else { return }
             mainView.picturesCollectionImageView[tag].image = image
-            mainView.picturesButton[tag].isHidden = true
+            mainView.picturesButton[tag].isHidden = true // hide picture selection button after picking
         }
         dismiss(animated: true, completion: nil)
     }

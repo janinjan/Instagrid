@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ * LayoutView inherits from UIView class. It defines the main grid view
+ */
 class LayoutView: UIView {
     
     // MARK: - Outlets
@@ -24,6 +27,9 @@ class LayoutView: UIView {
     }
     
     // MARK: - Methods
+    /**
+     * Displays views according to layout style 1, 2 or 3
+     */
     private func setLayoutStyle(_ layoutStyle: LayoutStyle) {
         switch layoutStyle {
         case .layout1:
@@ -38,9 +44,12 @@ class LayoutView: UIView {
         }
     }
     
+    /**
+     * Check if picture is missing in selected grid
+     */
     func missingPictureInGrid() -> Bool {
         for picture in picturesCollectionImageView {
-            if let parentView = picture.superview {
+            if let parentView = picture.superview { // parentView: view 0, 1, 2, 3
                 if parentView.isHidden == false &&  picture.image == nil {
                     return true
                 }
