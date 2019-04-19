@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_5" orientation="portrait">
+    <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -20,26 +20,26 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Instagrid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b7v-N2-Rrh" userLabel="Main View" customClass="LayoutView" customModule="Instagrid" customModuleProvider="target">
-                                <rect key="frame" x="38" y="199" width="338" height="338"/>
+                                <rect key="frame" x="38" y="279" width="338" height="338"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="PTl-H2-ZVm">
                                         <rect key="frame" x="15" y="15" width="308" height="308"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="TEe-tE-4me" userLabel="Top Stack View">
-                                                <rect key="frame" x="0.0" y="0.0" width="308" height="146.66666666666666"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="308" height="146.5"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C94-TM-fFn">
-                                                        <rect key="frame" x="0.0" y="0.0" width="146.66666666666666" height="146.66666666666666"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="146.5" height="146.5"/>
                                                         <subviews>
                                                             <imageView opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7C2-c3-Qxy" userLabel="Image1">
-                                                                <rect key="frame" x="0.0" y="0.0" width="146.66666666666666" height="146.66666666666666"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="146.5" height="146.5"/>
                                                             </imageView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6mg-OB-6h9">
-                                                                <rect key="frame" x="0.0" y="0.0" width="146.66666666666666" height="146.66666666666666"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="146.5" height="146.5"/>
                                                                 <state key="normal" image="BluePlusSign"/>
                                                                 <connections>
                                                                     <action selector="picturesButtonsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Aq4-8P-eJP"/>
@@ -61,13 +61,13 @@
                                                         </constraints>
                                                     </view>
                                                     <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qeu-8O-lqv">
-                                                        <rect key="frame" x="161.66666666666663" y="0.0" width="146.33333333333337" height="146.66666666666666"/>
+                                                        <rect key="frame" x="161.5" y="0.0" width="146.5" height="146.5"/>
                                                         <subviews>
                                                             <imageView opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ppE-mf-bXZ" userLabel="Image2">
-                                                                <rect key="frame" x="0.0" y="0.0" width="146.33333333333334" height="146.66666666666666"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="146.5" height="146.5"/>
                                                             </imageView>
                                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xPK-m3-hNh">
-                                                                <rect key="frame" x="0.0" y="0.0" width="146.33333333333334" height="146.66666666666666"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="146.5" height="146.5"/>
                                                                 <state key="normal" image="BluePlusSign"/>
                                                                 <connections>
                                                                     <action selector="picturesButtonsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="acN-4A-Die"/>
@@ -91,16 +91,16 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="uSv-KJ-jsY" userLabel="Bottom Stack View">
-                                                <rect key="frame" x="0.0" y="161.66666666666669" width="308" height="146.33333333333331"/>
+                                                <rect key="frame" x="0.0" y="161.5" width="308" height="146.5"/>
                                                 <subviews>
                                                     <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EWS-lA-gjV">
-                                                        <rect key="frame" x="0.0" y="0.0" width="146.66666666666666" height="146.33333333333334"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="146.5" height="146.5"/>
                                                         <subviews>
                                                             <imageView opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pv3-CW-mMH" userLabel="Image3">
-                                                                <rect key="frame" x="0.0" y="0.0" width="146.66666666666666" height="146.33333333333334"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="146.5" height="146.5"/>
                                                             </imageView>
                                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rkm-Zn-6eh">
-                                                                <rect key="frame" x="0.0" y="0.0" width="146.66666666666666" height="146.33333333333334"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="146.5" height="146.5"/>
                                                                 <state key="normal" image="BluePlusSign"/>
                                                                 <connections>
                                                                     <action selector="picturesButtonsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JpX-Zv-qdW"/>
@@ -122,13 +122,13 @@
                                                         </constraints>
                                                     </view>
                                                     <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="npi-xT-c5U">
-                                                        <rect key="frame" x="161.66666666666663" y="0.0" width="146.33333333333337" height="146.33333333333334"/>
+                                                        <rect key="frame" x="161.5" y="0.0" width="146.5" height="146.5"/>
                                                         <subviews>
                                                             <imageView opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m2a-bm-Iol" userLabel="Image4">
-                                                                <rect key="frame" x="0.0" y="0.0" width="146.33333333333334" height="146.33333333333334"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="146.5" height="146.5"/>
                                                             </imageView>
                                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CHK-lT-yCQ">
-                                                                <rect key="frame" x="0.0" y="0.0" width="146.33333333333334" height="146.33333333333334"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="146.5" height="146.5"/>
                                                                 <state key="normal" image="BluePlusSign"/>
                                                                 <connections>
                                                                     <action selector="picturesButtonsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SO7-rn-Dt4"/>
@@ -176,14 +176,14 @@
                                 </connections>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Tj3-SJ-OUb" userLabel="Swipe up">
-                                <rect key="frame" x="130" y="138.66666666666666" width="154" height="55.333333333333343"/>
+                                <rect key="frame" x="130" y="218" width="154" height="56"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="up" translatesAutoresizingMaskIntoConstraints="NO" id="eOn-Z6-MBg">
-                                        <rect key="frame" x="69.666666666666657" y="0.0" width="15" height="27.666666666666668"/>
+                                        <rect key="frame" x="69.5" y="0.0" width="15" height="28"/>
                                         <variation key="heightClass=compact" image="left"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="i0Y-bc-hla">
-                                        <rect key="frame" x="0.0" y="27.666666666666686" width="154" height="27.666666666666671"/>
+                                        <rect key="frame" x="0.0" y="28" width="154" height="28"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Swipe up to share">
                                                 <attributes>
@@ -208,7 +208,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagrid" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="HVJ-YJ-EQg">
-                                <rect key="frame" x="147.66666666666666" y="30" width="118.66666666666666" height="39"/>
+                                <rect key="frame" x="148" y="54" width="118.5" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="39" id="SLf-kR-auu"/>
                                 </constraints>
@@ -217,10 +217,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="MUR-6s-LrQ" userLabel="Layouts Choice">
-                                <rect key="frame" x="48" y="613.33333333333337" width="318" height="92.666666666666629"/>
+                                <rect key="frame" x="48" y="739.5" width="318" height="92.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mgb-eH-eOA" userLabel="ButtonLayout1">
-                                        <rect key="frame" x="0.0" y="0.0" width="92.666666666666671" height="92.666666666666671"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="92.5" height="92.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Mgb-eH-eOA" secondAttribute="height" multiplier="1:1" id="4kh-7e-WwZ"/>
                                             <constraint firstAttribute="width" secondItem="Mgb-eH-eOA" secondAttribute="height" multiplier="1:1" id="sLO-J6-v8a"/>
@@ -242,7 +242,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkw-HV-O8m" userLabel="ButtonLayout2">
-                                        <rect key="frame" x="112.66666666666666" y="0.0" width="92.666666666666657" height="92.666666666666671"/>
+                                        <rect key="frame" x="112.5" y="0.0" width="93" height="92.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="bkw-HV-O8m" secondAttribute="height" multiplier="1:1" id="h88-W0-CcW"/>
                                         </constraints>
@@ -253,7 +253,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAg-QM-gzq" userLabel="ButtonLayout3">
-                                        <rect key="frame" x="225.33333333333329" y="0.0" width="92.666666666666657" height="92.666666666666671"/>
+                                        <rect key="frame" x="225.5" y="0.0" width="92.5" height="92.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="hAg-QM-gzq" secondAttribute="height" multiplier="1:1" id="Nwc-JA-ZcU"/>
                                         </constraints>
